@@ -3,7 +3,7 @@ import Home from '../components/Home';
 
 const HomePage: React.FC = () => {
   return (
-    <div className='h-screen w-screen'>
+    <div className='h-screen w-screen bg-white'>
       <Home />
     </div>
   );
