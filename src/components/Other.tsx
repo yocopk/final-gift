@@ -10,11 +10,11 @@ export default function Other() {
     const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const person = event.target.value;
         if (event.target.checked) {
-            if (selectedPeople.length < 10) {
+            if (selectedPeople.length < 5) {
                 setSelectedPeople([...selectedPeople, person]);
             } else {
                 event.preventDefault();
-                alert("Puoi selezionare al massimo 10 persone.");
+                alert("Puoi selezionare al massimo 5 persone.");
             }
         } else {
             setSelectedPeople(selectedPeople.filter(item => item !== person));
@@ -35,7 +35,7 @@ export default function Other() {
     
     return (
         <div className="flex flex-col gap-10 items-center justify-center bg-white min-h-screen">
-            <h1 className="text-black text-4xl fade-in-first">Riccardo, scegli manualmente le tue preferenze (max. 10)</h1>
+            <h1 className="text-black text-4xl fade-in-first">Riccardo, scegli manualmente le tue preferenze (max. 5)</h1>
             <div className="grid grid-cols-3 grid-rows-4 gap-4">
                 {sortedPeople.map((person, index) => (
                     <div key={index} className="flex items-center gap-3 fade-in-second">
