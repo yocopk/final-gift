@@ -17,9 +17,9 @@ const App: React.FC = () => {
         <Route path="/second-question" element={<SecondPage />} />
         <Route path="/cards" element={<CardPage />} />
         <Route path="/flavio" element={<ChoicePage word="comprensibile" />} />
-        <Route path="/valerio" element={<ChoicePage word="saggia" />} />
-        <Route path="/christian" element={<ChoicePage word="saggia" />} />
-        <Route path="/sofia" element={<ChoicePage word="comprensibile" />} />
+        <Route path="/valerio" element={<ChoicePage word="affrettata" />} />
+        <Route path="/christian" element={<ChoicePage word="strategica" />} />
+        <Route path="/sofia" element={<ChoicePage word="azzeccata" />} />
         <Route path="/sofia-plus" element={<ChoicePage word="dettata dalla paura" />} />
         <Route path="/other" element={<OtherPage />} />
         <Route path="/final" element={<FinalPage />} />
