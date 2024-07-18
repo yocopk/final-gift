@@ -3,6 +3,15 @@ import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
   const [noButtonPosition, setNoButtonPosition] = useState({ top: 'auto', left: 'auto'});
+  const [showOnHover, setShowOnHover] = useState("none");
+
+  const showGif = () => {
+    setShowOnHover("block");
+  };
+
+  const hideGif = () => {
+    setShowOnHover("none");
+  };
 
   const moveNoButton = () => {
     const newTop = Math.floor(Math.random() * 90) + '%';
@@ -19,9 +28,10 @@ const Home: React.FC = () => {
             <button className={`px-8 py-4 text-2xl bg-red-500 text-white rounded-lg ${noButtonPosition.top === 'auto' ? '' : 'absolute'}`}
             style={noButtonPosition.top === 'auto' ? {} : { top: noButtonPosition.top, left: noButtonPosition.left }}
             onMouseEnter={moveNoButton}>Si</button>
-          <Link to="/cards" className="px-8 py-4 text-2xl bg-green-500 text-white rounded-lg absoulte z-10 transition-all hover:text-white hover:bg-green-800">No</Link>
+          <Link to="/cards" onMouseEnter={showGif} onMouseLeave={hideGif} className="px-8 py-4 text-2xl bg-green-500 text-white rounded-lg absoulte z-10 transition-all hover:text-white hover:bg-green-800">No</Link>
         </div>
       </div>
+      <iframe style={{ display: showOnHover }} src="https://giphy.com/embed/oZvduOsUmlsk" width="480" height="259" className="giphy-embed absolute bottom-10 rounded-lg" allowFullScreen></iframe>
     </div>
   );
 };
