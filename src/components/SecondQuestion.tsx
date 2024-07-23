@@ -20,9 +20,9 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <p className='text-4xl text-black font-medium mb-4 z-10 fade-in-first'>Riccardo...</p>
-      <h1 className="text-5xl text-black mb-8 z-10 fade-in-second">Stai mentendo?</h1>
+    <div className="flex flex-col items-center justify-start md:justify-center h-screen">
+      <p className='text-2xl md:text-4xl text-black font-medium mt-10 md:mt-0 mb-4 z-10 fade-in-first'>Riccardo...</p>
+      <h1 className="text-3xl md:text-5xl text-black mb-8 fade-in-second">Stai mentendo?</h1>
       <div className="flex flex-col items-center fade-in-third">
         <div className="flex justify-center gap-8 fade-in-third">
             <button className={`px-8 py-4 text-2xl bg-red-500 text-white rounded-lg ${noButtonPosition.top === 'auto' ? '' : 'absolute'}`}

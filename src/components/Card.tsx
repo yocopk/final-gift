@@ -31,7 +31,7 @@ export default function Card(){
 ]
 
     return (
-        <div className="flex gap-8 fade-in-second">
+        <div className="flex flex-col md:flex-row gap-2 px-2 md:gap-8 fade-in-second">
             {group.map((item, index) => (
                 <Link to={item.link} key={index} className="flex bg-blue-500 text-white p-5 rounded-lg flex-col items-center justify-center gap-2 transition-all hover:text-white hover:scale-110 hover:bg-blue-700">
                     <p className="text-2xl">{item.title}</p>

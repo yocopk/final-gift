@@ -20,9 +20,9 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      <p className='text-4xl text-black font-medium mb-4 z-10 fade-in-first'>Ciao Riccardo...</p>
-      <h1 className="text-5xl text-black mb-8 z-10 fade-in-second">La classe di progettoCODE <b>seconda edizione</b>, è la tua preferita?</h1>
+    <div className="flex flex-col items-center justify-start md:justify-center h-screen">
+      <p className='text-2xl md:text-4xl text-black font-medium mt-10 md:mt-0 mb-4 z-10 fade-in-first'>Ciao Riccardo...</p>
+      <h1 className="text-2xl md:text-5xl text-center text-black mb-8 px-8 fade-in-second">La classe di progettoCODE <b>seconda edizione</b>, è la tua preferita?</h1>
       <div className="flex flex-col items-center fade-in-third">
         <div className="flex justify-center gap-8 fade-in-third">
           <Link 

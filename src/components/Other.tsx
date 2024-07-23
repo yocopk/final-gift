@@ -34,9 +34,9 @@ export default function Other() {
     };
     
     return (
-        <div className="flex flex-col gap-10 items-center justify-center bg-white min-h-screen">
-            <h1 className="text-black text-4xl fade-in-first">Riccardo, scegli manualmente le tue preferenze (max. 5)</h1>
-            <div className="grid grid-cols-3 grid-rows-4 gap-4">
+        <div className="flex flex-col gap-10 items-center justify-start md:justify-center bg-white min-h-screen">
+            <h1 className="text-black font-medium text-2xl mt-10 text-center md:mt-0 md:text-4xl fade-in-first">Riccardo, scegli manualmente le tue preferenze (max. 5)</h1>
+            <div className="grid grid-cols-3 px-2 grid-rows-4 gap-2 md:gap-4">
                 {sortedPeople.map((person, index) => (
                     <div key={index} className="flex items-center gap-3 fade-in-second">
                         <input 
@@ -47,7 +47,7 @@ export default function Other() {
                             onChange={handleCheckboxChange} 
                             disabled={!selectedPeople.includes(person) && selectedPeople.length >= 10}
                         />
-                        <label htmlFor={person} className="text-black text-2xl">{person}</label>
+                        <label htmlFor={person} className="text-black text-md md:text-2xl">{person}</label>
                     </div>
                 ))}
             </div>
