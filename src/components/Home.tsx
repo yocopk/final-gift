@@ -36,7 +36,7 @@ const Home: React.FC = () => {
           <button
             className={`px-8 py-4 text-2xl bg-red-500 text-white rounded-lg ${noButtonPosition.top === 'auto' ? '' : 'absolute'}`}
             style={noButtonPosition.top === 'auto' ? {} : { top: noButtonPosition.top, left: noButtonPosition.left }}
-            onMouseEnter={moveNoButton}
+            onMouseEnter={moveNoButton} onClick={moveNoButton}
           >
             No
           </button>
